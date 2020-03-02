@@ -53,7 +53,7 @@ open class SparkleDriver: NSObject, SparkleBridge {
         case later
         case skip
     }
-
+    
     /// Implementations of the bridge protocol that call onto more Swift-friendly methods
     /// (subclass should not override these)
     
