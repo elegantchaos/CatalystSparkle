@@ -21,7 +21,7 @@ Have the plugin call back to the main app to present the user interface for upda
 
 This repository contains all the bits that you actually need to put into your own app.
 
-1. Link your application with the `SparkleBridgeClient` library
+1. Link your application with the `SparkleBridgeClient` framework and embed it in your application.
 2. Import `SparkleBridgeClient`
 3. Subclass `SparkleDriver` and implement the Sparkle UI in whatever way fits your use case.
 4. Call `SparkleBridgeClient.load(with: driver)`, passing in an instance of your driver subclass.
