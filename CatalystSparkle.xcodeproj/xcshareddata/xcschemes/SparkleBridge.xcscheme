@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B5E7E8223F6BB3500087E15"
-               BuildableName = "Plugin.bundle"
-               BlueprintName = "Plugin"
+               BuildableName = "SparkleBridge.bundle"
+               BlueprintName = "SparkleBridge"
                ReferencedContainer = "container:CatalystSparkle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
