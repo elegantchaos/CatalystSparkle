@@ -79,7 +79,7 @@
 				8B3F0ABB24095BC600E0F779 /* README.md */,
 				8B3F0AC424098D9C00E0F779 /* Shared */,
 				8B5E7E8423F6BB3500087E15 /* Plugin */,
-				8B48937D240D14C400E3E112 /* Bridge */,
+				8B48937D240D14C400E3E112 /* Client */,
 				8B3E64A423EAE62D00B28168 /* Products */,
 				8B5E7E7823F6BA8400087E15 /* Frameworks */,
 			);
@@ -103,13 +103,13 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		8B48937D240D14C400E3E112 /* Bridge */ = {
+		8B48937D240D14C400E3E112 /* Client */ = {
 			isa = PBXGroup;
 			children = (
 				8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */,
 				8B489386240D1AEB00E3E112 /* SparkleBridgeClient.swift */,
 			);
-			path = Bridge;
+			path = Client;
 			sourceTree = "<group>";
 		};
 		8B5E7E7823F6BA8400087E15 /* Frameworks */ = {
