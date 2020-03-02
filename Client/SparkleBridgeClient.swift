@@ -10,7 +10,8 @@ import Foundation
 public class SparkleBridgeClient {
     
     public class func load(with bridge: SparkleBridge) -> Result<SparkleBridgePlugin, NSError> {
-        if let pluginURL = Bundle.main.url(forResource: "SparkleBridge", withExtension: "bundle"), let bundle = Bundle(url: pluginURL) {
+        let bundle = Bundle(for: SparkleBridgeClient.self)
+        if let pluginURL = bundle.url(forResource: "SparkleBridge", withExtension: "bundle"), let bundle = Bundle(url: pluginURL) {
             if let cls = bundle.principalClass as? NSObject.Type {
                 if let instance = cls.init() as? SparkleBridgePlugin {
                     do {
