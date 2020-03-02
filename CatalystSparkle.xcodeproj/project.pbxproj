@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B3F0AC624098DF100E0F779 /* SparkleDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */; };
 		8B3F0ACE240990BF00E0F779 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3F0ACD240990BF00E0F779 /* Sparkle.framework */; };
+		8B489383240D14DC00E3E112 /* SparkleDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */; };
 		8B600FBF24091E630037ADA0 /* BridgingDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34FE0424083EE60070C5BF /* BridgingDriver.swift */; };
 		8B600FC024091E6A0037ADA0 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34FE0524083EE60070C5BF /* Plugin.swift */; };
 		8BBFAA962403F8F40091157A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BBFAA942403F8E80091157A /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8B48937A240D14C400E3E112 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BBFAA982404013B0091157A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,6 +43,7 @@
 		8B3F0ABB24095BC600E0F779 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 		8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkleDriver.swift; sourceTree = "<group>"; };
 		8B3F0ACD240990BF00E0F779 /* Sparkle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sparkle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B48937C240D14C400E3E112 /* libSparkleBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSparkleBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5E7E8323F6BB3500087E15 /* SparkleBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5E7E8523F6BB3500087E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B5E7E9223F6C0B600087E15 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -41,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8B489379240D14C400E3E112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B5E7E8023F6BB3500087E15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +75,7 @@
 				8B3F0ABB24095BC600E0F779 /* README.md */,
 				8B3F0AC424098D9C00E0F779 /* Shared */,
 				8B5E7E8423F6BB3500087E15 /* Plugin */,
+				8B48937D240D14C400E3E112 /* Bridge */,
 				8B3E64A423EAE62D00B28168 /* Products */,
 				8B5E7E7823F6BA8400087E15 /* Frameworks */,
 			);
@@ -67,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5E7E8323F6BB3500087E15 /* SparkleBridge.bundle */,
+				8B48937C240D14C400E3E112 /* libSparkleBridge.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,10 +93,18 @@
 		8B3F0AC424098D9C00E0F779 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8B5E7E9223F6C0B600087E15 /* BridgingHeader.h */,
 				8B34FE0324083EE60070C5BF /* SparkleBridge.h */,
-				8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		8B48937D240D14C400E3E112 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		8B5E7E7823F6BA8400087E15 /* Frameworks */ = {
@@ -94,7 +121,6 @@
 			children = (
 				8B34FE0424083EE60070C5BF /* BridgingDriver.swift */,
 				8B34FE0524083EE60070C5BF /* Plugin.swift */,
-				8B5E7E9223F6C0B600087E15 /* BridgingHeader.h */,
 				8B5E7E8523F6BB3500087E15 /* Info.plist */,
 			);
 			path = Plugin;
@@ -103,9 +129,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B5E7E8223F6BB3500087E15 /* SparkleBridge */ = {
+		8B48937B240D14C400E3E112 /* Bridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B5E7E8623F6BB3500087E15 /* Build configuration list for PBXNativeTarget "SparkleBridge" */;
+			buildConfigurationList = 8B489382240D14C400E3E112 /* Build configuration list for PBXNativeTarget "Bridge" */;
+			buildPhases = (
+				8B489378240D14C400E3E112 /* Sources */,
+				8B489379240D14C400E3E112 /* Frameworks */,
+				8B48937A240D14C400E3E112 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bridge;
+			productName = Bridge;
+			productReference = 8B48937C240D14C400E3E112 /* libSparkleBridge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8B5E7E8223F6BB3500087E15 /* Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B5E7E8623F6BB3500087E15 /* Build configuration list for PBXNativeTarget "Plugin" */;
 			buildPhases = (
 				8B5E7E7F23F6BB3500087E15 /* Sources */,
 				8B5E7E8023F6BB3500087E15 /* Frameworks */,
@@ -116,7 +159,7 @@
 			);
 			dependencies = (
 			);
-			name = SparkleBridge;
+			name = Plugin;
 			packageProductDependencies = (
 			);
 			productName = AppKitBridge;
@@ -133,6 +176,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Elegant Chaos";
 				TargetAttributes = {
+					8B48937B240D14C400E3E112 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					8B5E7E8223F6BB3500087E15 = {
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
@@ -154,7 +200,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B5E7E8223F6BB3500087E15 /* SparkleBridge */,
+				8B5E7E8223F6BB3500087E15 /* Plugin */,
+				8B48937B240D14C400E3E112 /* Bridge */,
 			);
 		};
 /* End PBXProject section */
@@ -170,12 +217,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8B489378240D14C400E3E112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B489383240D14DC00E3E112 /* SparkleDriver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8B5E7E7F23F6BB3500087E15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8B600FBF24091E630037ADA0 /* BridgingDriver.swift in Sources */,
-				8B3F0AC624098DF100E0F779 /* SparkleDriver.swift in Sources */,
 				8B600FC024091E6A0037ADA0 /* Plugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +353,36 @@
 			};
 			name = Release;
 		};
+		8B489380240D14C400E3E112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H48644JM2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SparkleBridge;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B489381240D14C400E3E112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2H48644JM2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SparkleBridge;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8B5E7E8723F6BB3500087E15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -314,10 +398,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elegantchaos.sparklebridge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SparkleBridge;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = Plugin/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -338,10 +422,10 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.elegantchaos.sparklebridge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SparkleBridge;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = Plugin/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = Shared/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -358,7 +442,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B5E7E8623F6BB3500087E15 /* Build configuration list for PBXNativeTarget "SparkleBridge" */ = {
+		8B489382240D14C400E3E112 /* Build configuration list for PBXNativeTarget "Bridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B489380240D14C400E3E112 /* Debug */,
+				8B489381240D14C400E3E112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B5E7E8623F6BB3500087E15 /* Build configuration list for PBXNativeTarget "Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B5E7E8723F6BB3500087E15 /* Debug */,
