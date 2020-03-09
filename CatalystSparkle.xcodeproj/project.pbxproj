@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B12FD6A2416B46A006BFEE0 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B3F0ACD240990BF00E0F779 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B12FD6A2416B46A006BFEE0 /* Sparkle.framework in Embed Sparkle Framework */ = {isa = PBXBuildFile; fileRef = 8B3F0ACD240990BF00E0F779 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8B12FD752416B5C0006BFEE0 /* org.sparkle-project.InstallerConnection.xpc in Copy XPCs to Catalyst Built Products */ = {isa = PBXBuildFile; fileRef = 8B12FD742416B5AB006BFEE0 /* org.sparkle-project.InstallerConnection.xpc */; };
+		8B12FD762416B5C0006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc in Copy XPCs to Catalyst Built Products */ = {isa = PBXBuildFile; fileRef = 8B12FD722416B5AB006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc */; };
+		8B12FD772416B5C0006BFEE0 /* org.sparkle-project.InstallerStatus.xpc in Copy XPCs to Catalyst Built Products */ = {isa = PBXBuildFile; fileRef = 8B12FD732416B5AB006BFEE0 /* org.sparkle-project.InstallerStatus.xpc */; };
 		8B3F0ACE240990BF00E0F779 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3F0ACD240990BF00E0F779 /* Sparkle.framework */; };
 		8B4893A8240D57A700E3E112 /* SparkleDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F0AC524098DF100E0F779 /* SparkleDriver.swift */; };
 		8B4893A9240D57AB00E3E112 /* SparkleBridgeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B489386240D1AEB00E3E112 /* SparkleBridgeClient.swift */; };
@@ -27,19 +30,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8BBFAA982404013B0091157A /* CopyFiles */ = {
+		8B12FD6B2416B589006BFEE0 /* Copy XPCs to Catalyst Built Products */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "../$(CONFIGURATION)-maccatalyst";
+			dstSubfolderSpec = 16;
+			files = (
+				8B12FD752416B5C0006BFEE0 /* org.sparkle-project.InstallerConnection.xpc in Copy XPCs to Catalyst Built Products */,
+				8B12FD762416B5C0006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc in Copy XPCs to Catalyst Built Products */,
+				8B12FD772416B5C0006BFEE0 /* org.sparkle-project.InstallerStatus.xpc in Copy XPCs to Catalyst Built Products */,
+			);
+			name = "Copy XPCs to Catalyst Built Products";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BBFAA982404013B0091157A /* Embed Sparkle Framework */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8B12FD6A2416B46A006BFEE0 /* Sparkle.framework in CopyFiles */,
+				8B12FD6A2416B46A006BFEE0 /* Sparkle.framework in Embed Sparkle Framework */,
 			);
+			name = "Embed Sparkle Framework";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8B12FD722416B5AB006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerLauncher.xpc"; path = "../Debug/org.sparkle-project.InstallerLauncher.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B12FD732416B5AB006BFEE0 /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerStatus.xpc"; path = "../Debug/org.sparkle-project.InstallerStatus.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B12FD742416B5AB006BFEE0 /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerConnection.xpc"; path = "../Debug/org.sparkle-project.InstallerConnection.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B34FE0324083EE60070C5BF /* SparkleBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkleBridge.h; sourceTree = "<group>"; };
 		8B34FE0424083EE60070C5BF /* BridgingDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingDriver.swift; sourceTree = "<group>"; };
 		8B34FE0524083EE60070C5BF /* Plugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
@@ -118,6 +138,9 @@
 		8B5E7E7823F6BA8400087E15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B12FD742416B5AB006BFEE0 /* org.sparkle-project.InstallerConnection.xpc */,
+				8B12FD722416B5AB006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc */,
+				8B12FD732416B5AB006BFEE0 /* org.sparkle-project.InstallerStatus.xpc */,
 				8B3F0ACD240990BF00E0F779 /* Sparkle.framework */,
 			);
 			name = Frameworks;
@@ -154,7 +177,6 @@
 				8B48939C240D579600E3E112 /* Sources */,
 				8B48939D240D579600E3E112 /* Frameworks */,
 				8B48939E240D579600E3E112 /* Resources */,
-				8B12FD692416B260006BFEE0 /* Copy XPCs to Catalyst Built Products */,
 			);
 			buildRules = (
 			);
@@ -173,7 +195,8 @@
 				8B5E7E7F23F6BB3500087E15 /* Sources */,
 				8B5E7E8023F6BB3500087E15 /* Frameworks */,
 				8B5E7E8123F6BB3500087E15 /* Resources */,
-				8BBFAA982404013B0091157A /* CopyFiles */,
+				8BBFAA982404013B0091157A /* Embed Sparkle Framework */,
+				8B12FD6B2416B589006BFEE0 /* Copy XPCs to Catalyst Built Products */,
 			);
 			buildRules = (
 			);
@@ -243,27 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8B12FD692416B260006BFEE0 /* Copy XPCs to Catalyst Built Products */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Copy XPCs to Catalyst Built Products";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -R \"${BUILT_PRODUCTS_DIR}/../${CONFIGURATION}\"/*.xpc \"${BUILT_PRODUCTS_DIR}\"\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B48939C240D579600E3E112 /* Sources */ = {
