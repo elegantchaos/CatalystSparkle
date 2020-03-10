@@ -57,9 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8B12FD722416B5AB006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerLauncher.xpc"; path = "../Debug/org.sparkle-project.InstallerLauncher.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B12FD732416B5AB006BFEE0 /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerStatus.xpc"; path = "../Debug/org.sparkle-project.InstallerStatus.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B12FD742416B5AB006BFEE0 /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerConnection.xpc"; path = "../Debug/org.sparkle-project.InstallerConnection.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B12FD722416B5AB006BFEE0 /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerLauncher.xpc"; path = "org.sparkle-project.InstallerLauncher.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B12FD732416B5AB006BFEE0 /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerStatus.xpc"; path = "org.sparkle-project.InstallerStatus.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B12FD742416B5AB006BFEE0 /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerConnection.xpc"; path = "org.sparkle-project.InstallerConnection.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B34FE0324083EE60070C5BF /* SparkleBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkleBridge.h; sourceTree = "<group>"; };
 		8B34FE0424083EE60070C5BF /* BridgingDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgingDriver.swift; sourceTree = "<group>"; };
 		8B34FE0524083EE60070C5BF /* Plugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
