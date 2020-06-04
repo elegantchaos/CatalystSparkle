@@ -3,6 +3,10 @@
 //  All code (c) 2020 - present day, Elegant Chaos Limited.
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+
+#ifndef SparkleBridge_Bridge_h
+#define SparkleBridge_Bridge_h
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -43,3 +47,5 @@ typedef struct {
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* SparkleBridge_Bridge_h */
